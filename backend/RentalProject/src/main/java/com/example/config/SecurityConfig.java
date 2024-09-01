@@ -26,23 +26,6 @@ public class SecurityConfig {
     @Autowired
     private UserDetailsService userDetailsService;
 
-    // @Bean
-    // public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-    //     return http
-    //             .csrf(customizer -> customizer.disable())
-    //             .authorizeHttpRequests(request -> request
-    //                     .requestMatchers("/", "/get-otp", "/get-all-roommates", "/get-all-rooms", "/add-user",
-    //                             "/send-otp", "/api/auth/validate")
-    //                     .permitAll() // permit all
-    //                     // requests to the
-    //                     // root URL and login/register
-    //                     // endpoints
-    //                     .anyRequest().authenticated())
-    //             .httpBasic(Customizer.withDefaults())
-    //             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-    //             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-    //             .build();
-    // }
 
 @Bean
 public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -52,7 +35,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
         .authorizeHttpRequests(request -> request
             .requestMatchers("/", "/get-otp", "/get-all-roommates", "/get-all-rooms", "/add-user",
                                 "/send-otp", "/api/auth/validate","/get-room/*","/get-roommie/*")
-            .permitAll() // permit all requests to the root URL and login/register endpoints
+            .permitAll() 
             .anyRequest().authenticated())
         .httpBasic(Customizer.withDefaults())
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -60,20 +43,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
         .build();
 }
 
-    // @Bean
-    // public SecurityFilterChain securityFilterChain(HttpSecurity http) throws
-    // Exception {
 
-    // return http.csrf(customizer ->
-    // customizer.disable()).authorizeHttpRequests(request -> request
-    // .requestMatchers("login", "register").permitAll()
-    // .anyRequest().authenticated()).httpBasic(Customizer.withDefaults())
-    // .sessionManagement(session ->
-    // session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-    // .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-    // .build();
-
-    // }
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
