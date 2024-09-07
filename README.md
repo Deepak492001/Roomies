@@ -2,7 +2,7 @@
 
 <p>A platform to find rooms, roommates, and host rooms for rent, built using modern web technologies.</p>
 
-<img src="path-to-your-screenshot.png" alt="Roomies Screenshot" width="600">
+<img src="readmefiles/roomies.png" alt="Roomies Screenshot" width="600">
 
 <h2>Table of Contents</h2>
 <ul>
