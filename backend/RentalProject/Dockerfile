@@ -7,7 +7,7 @@ COPY pom.xml ./
 RUN mvn dependency:go-offline -B
 
 # Copy the source code
-COPY src ./src
+COPY  backend/RentalProject .
 
 # Build the project, skipping tests for faster builds
 RUN mvn clean package -DskipTests
