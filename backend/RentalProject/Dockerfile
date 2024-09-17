@@ -3,8 +3,8 @@ FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 
 # Copy the pom.xml and download dependencies only (cache layer)
-COPY pom.xml ./
-RUN mvn dependency:go-offline -B
+# COPY pom.xml ./
+# RUN mvn dependency:go-offline -B
 
 # Copy the source code
 COPY  backend/RentalProject .
