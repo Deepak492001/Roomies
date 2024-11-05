@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:8080";
+export const BASE_URL = "https://roomies-backend-r8wa.onrender.com";
 import charlieImage from "../assets/Customers/Cus1.jpg";
 import Bob from "../assets/Customers/Cus2.jpg";
 import Alice from "../assets/Customers/Cus3.jpg";
