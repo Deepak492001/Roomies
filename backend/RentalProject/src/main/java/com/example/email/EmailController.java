@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("https://frontend-roomies.vercel.app/")
 public class EmailController {
     @Autowired
     private EmailService emailService;
