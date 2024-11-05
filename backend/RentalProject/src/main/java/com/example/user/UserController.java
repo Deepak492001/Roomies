@@ -20,7 +20,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("https://frontend-roomies.vercel.app/")
 
 public class UserController {
 
