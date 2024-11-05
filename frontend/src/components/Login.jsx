@@ -75,7 +75,7 @@ const Login = ({ handleLogin }) => {
     event.preventDefault();
     const response = await getOTP();
     // otp verify
-    if (response == otp) {
+  if (response.otp == otp) {
       toast.success(`Done`);
       const finalResponse = await addUser(user);
       console.log(finalResponse);
