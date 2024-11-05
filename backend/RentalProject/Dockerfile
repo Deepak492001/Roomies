@@ -17,10 +17,10 @@ FROM openjdk:17.0.1-jdk-slim
 # WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /target/roomiehub-0.0.1-SNAPSHOT.jar roomiehub.jar
+COPY --from=build /target/RentalProject-0.0.1-SNAPSHOT.jar RentalProject.jar
 
 # Expose the necessary port
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "roomiehub.jar"]
+ENTRYPOINT ["java", "-jar", "RentalProject.jar"]
