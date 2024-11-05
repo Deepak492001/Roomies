@@ -23,7 +23,7 @@ import com.example.user.UserService;
 
 @RestController
 // @RequestMapping("/api/roommates")
-@CrossOrigin("*")
+@CrossOrigin("https://frontend-roomies.vercel.app/")
 public class RoommateController {
 	@Autowired
 	private RoommateService roommateService;
