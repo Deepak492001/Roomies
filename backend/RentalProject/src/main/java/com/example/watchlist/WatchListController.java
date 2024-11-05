@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.room.Room;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("https://frontend-roomies.vercel.app/")
 public class WatchListController {
   @Autowired
   private WatchListService watchlistService;
